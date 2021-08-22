@@ -15,8 +15,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         formData.append('SelectedFile', input.files[0]);
 
-        fetch("http://localhost:8000/index.php",{
+        fetch("http://localhost:8000/api.php",{
             method:"POST",
+            headers: {
+              'Content-Type': 'Content-Type: application/json',
+             },
             body:formData
         }).catch(console.error);
     })

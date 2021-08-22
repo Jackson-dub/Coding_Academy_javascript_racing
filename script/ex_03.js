@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             popUp.style.visibility ="hidden";
             alert(`Are you sure ${text} is your name ?`);
             alert(`Hello ${text} !`);
+            whiteSquare[0].innerHTML = `Hello ${text} !`
         }
 
      }

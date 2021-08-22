@@ -19,15 +19,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         body.style.fontSize = count+'rem';
        }
 
-       let options = Array.from(select.children);
-       options.forEach(function(option){
-           if(option.value){
-               option.onclick = function(){
-                   body.style.backgroundColor = option.value;
-               }
-           }
+      // let options = Array.from(select.children);
+      // options.forEach(function(option){
            
-       });
+       // if(option.value){
+            
+        select.addEventListener('change', function() {
+                    console.log(select.options[select.selectedIndex].value)
+            body.style.backgroundColor = select.options[select.selectedIndex].value;
+            //}
+});
+           
+      // });
 
 
     });
